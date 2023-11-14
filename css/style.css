@@ -6,46 +6,134 @@
 
 .grid-conainer {
     display: grid;
-    grid-template-rows: 10% 1fr 10%;
+    overflow: hidden;
+    grid-template-rows: 10% 80% 1fr;
     width: 100%;
     height: 100vh;
-    
 }
 
 header {
     display: flex;
     justify-content: center;
     justify-items: center;
-    background-color: aquamarine;
+    background-color: #1D3354;
+    color: #9ED8DB;
 }
 
 header nav ul li {
     padding: 30px;
     display: inline-block;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 
 nav a {
     text-decoration: none;
+    color: #9ED8DB;
+}
+
+nav a:visited {
+    color: #9ED8DB;
 }
 
 main {
     display: grid;
-    grid-template-columns: 15% 1fr;
+    grid-template-columns: 100%;
 }
 
+/* importent copy */
 .grid-left {
-    background-color: blueviolet;
+    background-color: #9ED8DB;
+    color: #1D3354;
+    border-right: 2px solid #1D3354;
     padding: 20px;
 }
 
 .grid-left img {
-    width: 100px;
+    width: 175px;
+    /* border-radius: 50%; */
+}
+
+.grid-left h3 {
+    text-decoration: underline;
+}
+
+.html-border {
+    border: 5px solid black;
+    width: 100%;
+    height: 20px;
+}
+
+.html-border p {
+    text-align: right;
+    color: #fff;
+}
+
+.css-border {
+    border: 5px solid black;
+    width: 100%;
+    height: 20px;
+}
+
+.css-border p {
+    text-align: right;
+    color: #fff;
+}
+
+.js-border {
+    border: 5px solid black;
+    width: 100%;
+    height: 20px;
+}
+
+.js-border p {
+    text-align: right;
+    color: #fff;
+}
+
+.percentage-bar-1 {
+    width: 80%;
+    height: 100%;
+    background-color: green;
+}
+
+.percentage-bar-2 {
+    width: 70%;
+    height: 100%;
+    background-color: green;
+}
+
+.percentage-bar-3 {
+    width: 40%;
+    height: 100%;
+    background-color: red;
+}
+
+/* importend copy end */
+
+.grid-mid {
+    background-color: #9ED8DB;
+    border: 2px solid #1D3354;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+}
+
+.content h1 {
+    font-size: xx-large;
 }
 
 footer {
     padding: 30px;
-    background-color: gray;
-    color: #fff;
+    background-color: #1D3354;
+    color: #9ED8DB;
     text-align: center;
 }
-
