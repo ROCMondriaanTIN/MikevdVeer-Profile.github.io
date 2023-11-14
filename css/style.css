@@ -4,9 +4,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.grid-conainer {
-    display: grid;
+body, html {
     overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
     grid-template-rows: 10% 80% 1fr;
     width: 100%;
     height: 100vh;
@@ -16,16 +21,25 @@ header {
     display: flex;
     justify-content: center;
     justify-items: center;
+    padding: 15px;
     background-color: #1D3354;
     color: #9ED8DB;
 }
 
+header nav {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
 header nav ul li {
-    padding: 30px;
-    display: inline-block;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
+    padding: 10px; 
+    display: block;
 }
 
 nav a {
@@ -37,103 +51,119 @@ nav a:visited {
     color: #9ED8DB;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 100%;
+#right {
+    padding-left: 10px; 
 }
 
-/* importent copy */
-.grid-left {
-    background-color: #9ED8DB;
-    color: #1D3354;
-    border-right: 2px solid #1D3354;
-    padding: 20px;
+#mid {
+    padding-left: 10px; 
 }
 
-.grid-left img {
-    width: 175px;
-    /* border-radius: 50%; */
+#left {
+    padding-right: 10px;
 }
 
-.grid-left h3 {
-    text-decoration: underline;
+p {
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.3), 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-.html-border {
-    border: 5px solid black;
-    width: 100%;
-    height: 20px;
-}
-
-.html-border p {
-    text-align: right;
-    color: #fff;
-}
-
-.css-border {
-    border: 5px solid black;
-    width: 100%;
-    height: 20px;
-}
-
-.css-border p {
-    text-align: right;
-    color: #fff;
-}
-
-.js-border {
-    border: 5px solid black;
-    width: 100%;
-    height: 20px;
-}
-
-.js-border p {
-    text-align: right;
-    color: #fff;
-}
-
-.percentage-bar-1 {
-    width: 80%;
-    height: 100%;
-    background-color: green;
-}
-
-.percentage-bar-2 {
-    width: 70%;
-    height: 100%;
-    background-color: green;
-}
-
-.percentage-bar-3 {
-    width: 40%;
-    height: 100%;
-    background-color: red;
-}
-
-/* importend copy end */
-
-.grid-mid {
-    background-color: #9ED8DB;
-    border: 2px solid #1D3354;
-    height: 100%;
-    width: 100%;
-}
-
-.content {
+.display {
+    background-color: #20a7d8;
+    color: #e5e5e5;
+    font-size: 2.26rem;
+    text-transform: uppercase;
+    height: 81vh;
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    top: 50%;
 }
 
-.content h1 {
-    font-size: xx-large;
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 8s infinite;
+}
+
+.first div,
+.second div,
+.third div {
+    background-color: #1D3354;
+    color: #20a7d8;
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+    10% {
+        margin-top: 0;
+    }
+    20% {
+        margin-top: -5.62rem;
+    }
+    30% {
+        margin-top: -5.62rem;
+    }
+    40% {
+        margin-top: -11.24rem;
+    }
+    60% {
+        margin-top: -11.24rem;
+    }
+    70% {
+        margin-top: -5.62rem;
+    }
+    80% {
+        margin-top: -5.62rem;
+    }
+    90% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 0;
+    }
 }
 
 footer {
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    padding: 20px;
     background-color: #1D3354;
     color: #9ED8DB;
     text-align: center;
+}
+
+footer > .line {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    #right,
+    #mid,
+    #left {
+        padding: 0;
+    }
 }
