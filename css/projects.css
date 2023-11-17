@@ -38,7 +38,8 @@ main {
 
 .grid-mid {
     display: flex;
-    background-color: azure;    
+    background-color: azure; 
+    overflow: auto;   
 }
 
 .container {
@@ -52,6 +53,10 @@ main {
 }
 
 /* Gallary */
+.image-container {
+  
+  min-height: 100vh;
+}
 
 .mySlides {display: none;}
 .slideshow-container img {

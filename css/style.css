@@ -45,8 +45,6 @@ main {
     border-radius: 10%;
 }
 
-
-
 .html-border, .css-border, .Js-border{
     width: 85%;
     height: 20px;
@@ -90,6 +88,16 @@ main {
 
 .line {
     text-decoration: underline;
+}
+/* hover animation */
+.home:hover {
+
+}
+
+.left-side li:hover {
+    margin: 5px;
+    text-decoration: underline 3px orangered;
+    cursor: pointer;
 }
 
 footer {
