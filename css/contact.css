@@ -33,24 +33,35 @@ header a {
 
 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 80% 1fr;
 }
 
-.grid-mid {
-    display: flex;
+.grid-left {
     background-color: azure;
-    overflow: auto;   
+    width: 100%;
+    border: 5px solid black;
 }
 
-.container {
-    border: 5px solid black;
-    width: 100%;
-    text-align: center;
+.grid-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    background-color: #9ED8DB;
+    padding: 10px;
     overflow: auto;
 }
 
+.grid-right h3 {
+    text-align: center;
+    font-size: x-large;
+}
+
+
 /* form */
 input {
+    margin: 3px;
     padding: 10px;
     border-radius: 10px;
     background: #1D3354;
@@ -74,15 +85,17 @@ textarea::placeholder {
 
 .btn.btn-primary {
   font-family: 'Quicksand', sans-serif;
-	font-weight: bold;
+  font-weight: bold;
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 3rem;
   border: 0;
   border-radius: 3rem;
   background-image:linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+  border: 3px solid black;
   background-size: 300% 100%;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .btn.btn-primary:hover:enabled {
