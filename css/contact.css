@@ -41,6 +41,8 @@ main {
     width: 100%;
     border: 5px solid black;
 }
+/* create card */
+
 
 .grid-right {
     display: flex;
@@ -53,14 +55,26 @@ main {
     overflow: auto;
 }
 
-.grid-right h3 {
+.container{
+    width: 100%;
     text-align: center;
-    font-size: x-large;
 }
 
 
 /* form */
+input:focus, textarea:focus {
+    border: 1px solid #00fff0;
+    color: #00fff0;
+    transition: all 0.3s ease;
+ }
+
+ input:focus::placeholder,  textarea:focus::placeholder {
+    color: #00fff0;
+    transition: all 0.3s ease;
+ }
+
 input {
+    width: 100%;
     margin: 3px;
     padding: 10px;
     border-radius: 10px;
@@ -73,6 +87,7 @@ input::placeholder {
 }
 
 textarea {
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     background: #1D3354;
@@ -102,16 +117,6 @@ textarea::placeholder {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
   transform: translateY(-0.15em);
-}
-
-.maps {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.line {
-    text-decoration: underline;
 }
 
 footer {

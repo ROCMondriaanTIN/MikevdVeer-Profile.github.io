@@ -27,31 +27,28 @@
             <div class="grid-right">
                 <div class="container">
                     <h3>Contact Me</h3><br>
+                    <form>
                     <!-- Name -->
                     <div class="design">
-                        <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+                        <input type="text" id="name" class="form-control form-control-lg thick" placeholder="Your Name" required>
                     </div>
                     <!-- E-mail -->
                     <div class="design">
-                        <label for="formEmail" class="d-block">
-                            <i class="icon" data-feather="mail"></i>
-                        </label>
-                        <input type="email" id="formEmail" class="form-control form-control-lg thick"
-                            placeholder="E-mail">
+                        <input type="email" id="email" class="form-control form-control-lg thick"
+                            placeholder="E-mail" required>
                     </div>
                     <!-- Message -->
                     <div class="form-group message">
-                        <textarea id="formMessage" class="form-control form-control-lg" rows="7"
-                            placeholder="Comment"></textarea>
+                        <textarea id="message" class="form-control form-control-lg" rows="7"
+                            placeholder="Comment" required></textarea>
                     </div>
 
                     <!-- Submit btn -->
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Send message</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
 
-                    </form><br>
-
+                    </form>
                 </div>
             </div>
         </main>
