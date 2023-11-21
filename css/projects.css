@@ -11,24 +11,26 @@
     width: 100%;
     height: 100vh;
 }
-
 header {
-    background-color: #1D3354;
-    color: #9ED8DB;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #1D3354;
+  color: #9ED8DB;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav ul li {
-    display: inline-block;
-    margin: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+nav li a:hover{
+  color: #FFFFFF;
 }
 
 header a {
-    text-decoration: none;
-    color: #9ED8DB;
+  text-decoration: none;
+  color: #9ED8DB;
 }
 
 main {

@@ -25,6 +25,9 @@ header nav ul li {
     display: inline-block;
     margin: 10px;
 }
+nav li a:hover{
+    color: #FFFFFF;
+}
 
 header a {
     text-decoration: none;
