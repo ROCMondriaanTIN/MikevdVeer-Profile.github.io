@@ -115,7 +115,7 @@ main {
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev, .next {
   background-color: rgba(0,0,0,0.8);
 }
 
