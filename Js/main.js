@@ -29,3 +29,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+// new page playlist
+function playlist() {
+  window.open("playlist.html", "_blank");
+}
+

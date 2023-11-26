@@ -84,7 +84,9 @@ main {
   max-width: 750px;
   position: relative;
   margin: auto;
+  cursor: pointer;
 }
+
 
 .text {
   color: #f2f2f2;
