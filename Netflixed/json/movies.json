@@ -1,0 +1,41 @@
+{
+    "YOUR NAME": {
+        "id": 1,
+        "title": "Your Name",
+        "img": "https://gogocdn.net/cover/kimi-no-na-wa.jpg",
+        "episodes": 1,
+        "page": "./info-pages/your-name-page.html"
+    },
+    
+    "SWORD ART ONLINE Ordinal Scale": {
+        "id": 2,
+        "title": "SWORD ART ONLINE Ordinal Scale",
+        "img": "https://gogocdn.net/cover/sword-art-online-movie-ordinal-scale.png",
+        "episodes": 1,
+        "page": "./info-pages/SWORD ART ONLINE Ordinal Scale.html"
+    },
+
+    "Weathering with You": {
+        "id": 3,
+        "title": "Weathering with You",
+        "img": "https://www7.gogoanime.me/cover/tenki-no-ko.png",
+        "episodes": 1,
+        "page": "./info-pages/Weathering with You.html"
+    },
+
+    "Sazume": {
+        "id": 4,
+        "title": "Sazume",
+        "img": "https://www7.gogoanime.me/cover/suzume-no-tojimari-dub.png",
+        "episodes": 1,
+        "page": "./info-pages/Sazume.html"
+    },
+
+    "A silent voice": {
+        "id": 5,
+        "title": "A silent voice",
+        "img": "https://gogocdn.net/cover/koe-no-katachi-movie.png",
+        "episodes": 1,
+        "page": ""
+    }
+} 

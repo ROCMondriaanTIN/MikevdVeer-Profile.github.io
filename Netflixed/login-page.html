@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/logo/logo.png">
+    <link rel="stylesheet" href="./css/login-page.css">
+    <title>Netfixed</title>
+</head>
+
+<body>
+
+    <div class="start">
+        <header>
+            <h3>Netfixed</h3>
+
+            <nav>
+                <ul>
+                    <a href="landing-page.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="movies-page.html">
+                        <li>Movies</li>
+                    </a>
+                    <a href="new-page.html">
+                        <li>New</li>
+                    </a>
+                    <a href="populair-page.html">
+                        <li>Populair</li>
+                    </a>
+                    <a href="login-page.html">
+                        <li class="underline">Login</li>
+                    </a>
+                    <!-- <input placeholder="search" name="keyword" id="keyword" type="text" value="" autocomplete="off"
+                        oninput="searchItems()" maxlength="16"><i class="fa fa-search"></i> -->
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <section>
+                <div class="form-box">
+                    <div class="form-value">
+                        <form class="login-form" method="get">
+                            <h2>Login</h2>
+                            <div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="text" required>
+                                <label for="">Username</label>
+                            </div>
+                            <div class="inputbox">
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                <input type="password" id="password" required>
+                                <label for="">Password</label>
+                            </div>
+                            <!--LABEL REPLACEMENT/FORGETPASSWORD/NAAR_Register-->
+                            <div class="forget">
+                                <label for="Remember"><input type="checkbox" checked>Remember Me </label>
+                            </div>
+                            <button type="submit">Log in</button>
+                            <div class="register">
+                                <p>Don't have an account <a href="#">Register</a></p><br><a href="#">Forget Password</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer>
+            <p><a href="">About us</a> | <a href=""> Contact us</a> | <a href="">Privacy</a> | <a href="landing-page.html">Netfixed</a></p>
+        </footer>
+        <script src="./js/main-shows.js"></script>
+    </div>
+</body>
+
+</html>

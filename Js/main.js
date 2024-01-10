@@ -34,3 +34,7 @@ function playlist() {
   window.open("playlist.html", "_blank");
 }
 
+function netfixed() {
+  window.open("Netflixed/landing-page.html", "_blank")
+}
+

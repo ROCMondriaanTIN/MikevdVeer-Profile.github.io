@@ -1,0 +1,72 @@
+{
+    "SWORD ART ONLINE": {
+        "id": 1,
+        "title": "SWORD ART ONLINE",
+        "img": "https://gogocdn.net/images/anime/S/sword-art-online.jpg",
+        "episodes": 25,
+        "page": "./info-pages/sao-info-page.html"
+    },
+    "SWORD ART ONLINE II": {
+        "id": 2,
+        "title": "SWORD ART ONLINE II",
+        "img": "https://gogocdn.net/images/summer/sao_2.jpg",
+        "episodes": 24,
+        "page": "./info-pages/saoII-info-page.html"
+    },
+    "SWORD ART ONLINE: ALICIZATION": {
+        "id": 3,
+        "title": "SWORD ART ONLINE: ALICIZATION",
+        "img": "https://gogocdn.net/cover/sword-art-online-alicization.png",
+        "episodes": 24,
+        "page": "./info-pages/sao-alicization-page.html"
+    },
+    "SWORD ART ONLINE: ALICIZATION - WAR OF UNDERWORLD": {
+        "id": 4,
+        "title": "SWORD ART ONLINE: ALICIZATION - WAR OF UNDERWORLD",
+        "img": "https://gogocdn.net/cover/sword-art-online-alicization-war-of-underworld-dub.png",
+        "episodes": 13,
+        "page": "./info-pages/sao-alicization-warofunderworld.html"
+    },
+    "UNDEAD UNLUCK": {
+        "id": 5,
+        "title": "UNDEAD UNLUCK",
+        "img": "https://gogocdn.net/cover/undead-unluck-1696013292.png",
+        "episodes": 13,
+        "page": "./info-pages/undead unluck.html"
+    },
+    "gotoubun no hanayome": {
+        "id": 6,
+        "title": "gotoubun no hanayome",
+        "img": "https://gogocdn.net/cover/gotoubun-no-hanayome.png",
+        "episodes": 12,
+        "page": "./info-pages/gotobun no hanayome.html"
+    },
+    "Keikenzumi na Kimi to, Keiken Zero na Ore ga, Otsukiai suru Hanashi": {
+        "id": 7,
+        "title": "You Were Experienced, I Was Not: Our Dating Story",
+        "img": "https://www7.gogoanime.me/cover/keikenzumi-na-kimi-to-keiken-zero-na-ore-ga-otsukiai-suru-hanashi.png",
+        "episodes": 11,
+        "page": "./info-pages/You Were Experienced.html"
+    },
+    "The Eminence in Shadow, Shadow Garden": {
+        "id": 8,
+        "title": "The Eminence in Shadow, Shadow Garden",
+        "img": "https://gogocdn.net/cover/kage-no-jitsuryokusha-ni-naritakute-1664388804.png",
+        "episodes": 12,
+        "page": "./info-pages/shadowgarden-page.html"
+    },
+    "SWORD ART ONLINE: ALICIZATION - War": {
+        "id": 9,
+        "title": "SWORD ART ONLINE: ALICIZATION - War",
+        "img": "https://gogocdn.net/cover/sword-art-online-alicization-war-of-underworld.png",
+        "episodes": 12,
+        "page": "./info-pages/sao-alicization-war-page.html"
+    },
+    "Oshi no ko": {
+        "id": 10,
+        "title": "Oshi no ko",
+        "img": "https://gogocdn.net/cover/oshi-no-ko-1680121500.png",
+        "episodes": 11,
+        "page": "./info-pages/oshinoko-page.html"
+    }
+}
