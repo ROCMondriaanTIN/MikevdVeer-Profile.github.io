@@ -1,127 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>Myprofile</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/Image/logo.png" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>MyProfile</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <header>
-        <a href="#home">
-            <h2>Mike</h2>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <!-- menu Icon -->
-            <div class="menu-icon">&#9776;</div>
-            <div class="overlay-menu">
-                <input type="text" placeholder="Search.." />
-                <ul>
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- Add more menu items here -->
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <div class="wrapper">
-                <div class="front">
-                    <h1>Mike's Portfolio</h1>
-                    <h2>Interactive</h2>
-                    <h2>Software developer</h2>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="./images/myself.jpg" style="width:45%;" class="w3-round"><br><br>
+            <h4><b>PORTFOLIO</b></h4>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+        </div>
+        <div class="w3-panel w3-large">
+            <i class="fa fa-github fa-fw w3-margin-right"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header id="portfolio">
+            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                    class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1><b>My Projects</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <span class="w3-margin-right">Filter:</span>
+                    <button class="w3-button w3-black">ALL</button>
                 </div>
-                <div class="img-container">
-                    <img src="data:image/png;base64,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"
-                        alt="A foto of me">
+            </div>
+        </header>
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="https://i.pinimg.com/originals/af/a7/5b/afa75b60e592802ee85b4947ed341b91.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="about-me">
-            <div class="intro-content">
-                <h2>Something</h2>
-                <h1>About me</h1>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="intro-content">
-                <h2>My Favorite</h2>
-                <h1>Projects</h1>
-            </div>
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <a href="">
-                    <img src="https://img.gamepix.com/games/whack-a-mole/cover/whack-a-mole.png?width=600&height=340&fit=cover&quality=90"
-                        style="width:100%"></a>
-                    <div class="text">Minigames</div>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
                 </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <a href="">
-                    <img src="https://images.hitpaw.com/topics/animated-video/4anime-anime-streming-website.jpg?w=720&h=400"
-                        style="width:100%"></a>
-                    <div class="text">Netfixed</div>
+            </div>
+            <div class="w3-third w3-container">
+                <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
                 </div>
-
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-        </section>
-
-        <section id="contact">
-            <div class="intro-content">
-                <h1>Contact</h1>
-            </div>
-            <div class="wrapper">
-            <div class="maps">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2455.091164818752!2d4.347333812131685!3d52.02343687181815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5d771b631e7%3A0xcbe808e083d3d558!2sROC%20Mondriaan!5e0!3m2!1sen!2snl!4v1710231686458!5m2!1sen!2snl"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="social">
-                <ul>
-                    <li>@mikeveer</li>
-                    <li>@mikeveer</li>
-                    <li>@mikeveer</li>
-                    <li>@mikeveer</li>
-                </ul>
             </div>
         </div>
-        </section>
-        <footer>
-            @2024 mike, All right reserved.
+
+        <!-- Second Photo Grid-->
+        <!-- <div class="w3-row-padding">
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="w3-third w3-container">
+                <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Lorem Ipsum</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">«</a>
+                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">»</a>
+            </div>
+        </div>
+
+        <!-- Images of Me -->
+        <div class="w3-row-padding w3-padding-16" id="about">
+            <div class="w3-col m4">
+                <img src="./images/myself.jpg" alt="Me" style="width:100%">
+            </div>
+            <div class="w3-col m4">
+                <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
+            </div>
+            <div class="w3-col m4">
+                <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+            <h4><b>About Me</b></h4>
+            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of
+                lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus
+                ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                congue gravida diam non fringilla.</p>
+            <hr>
+
+            <h4>Programming skills</h4>
+            <!-- Progress bars / Skills -->
+            <p>HTML</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
+            </div>
+            <p>CSS</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:75%">75%</div>
+            </div>
+            <p>JAVASCRIPT</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:55%">55%</div>
+            </div>
+            <p>
+                <a href="./images/myself.jpg" download="">
+                <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+                    <i class="fa fa-download w3-margin-right"></i>Download CV
+                </button>
+            </a>
+            </p>
+            <hr>
+
+            <!-- <h4>How much I charge</h4>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                    <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">1GB Storage</li>
+                        <li class="w3-padding-16">Mail Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 10</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-third w3-margin-bottom">
+                    <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">50GB Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 25</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-third">
+                    <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">Unlimited Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 25</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Contact Section -->
+        <div class="w3-container w3-padding-large w3-grey">
+            <h4 id="contact"><b>Contact Me</b></h4>
+            <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>mikeveer@live.nl</p>
+                </div>
+                <div class="w3-third w3-teal">
+                    <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>Den Heague, The Netherlands</p>
+                </div>
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>0640358050</p>
+                </div>
+            </div>
+            <hr class="w3-opacity">
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+                        class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-dark-grey">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h3>FOOTER</h3>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla.</p>
+                    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+
+                <div class="w3-third">
+                    <h3></h3>
+                    <ul class="w3-ul w3-hoverable">
+                    </ul>
+                </div>
+
+                <div class="w3-third">
+                    <h3>Hobbies</h3>
+                    <p>
+                        <span class="w3-tag w3-black w3-margin-bottom">Programming</span> <span
+                            class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span> <span
+                            class="w3-tag w3-grey w3-small w3-margin-bottom">Music</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Cooking</span> <span
+                            class="w3-tag w3-grey w3-small w3-margin-bottom">Chilling with friends</span> <span
+                            class="w3-tag w3-grey w3-small w3-margin-bottom">Footbal</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Gym</span> <span
+                            class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span>
+
+                    </p>
+                </div>
+
+            </div>
         </footer>
 
-    </main>
+    </div>
 
+    <script src="./Js/main.js"></script>
 
-    <script src="/js/main.js"></script>
 </body>
 
 </html>
