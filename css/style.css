@@ -25,3 +25,11 @@ h6 {
     font-family: "Raleway", sans-serif
 }
 
+.project img{
+  height: 250px;
+}
+
+input {
+  border-radius: 10px;
+}
+
