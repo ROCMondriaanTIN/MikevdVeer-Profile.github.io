@@ -1154,10 +1154,10 @@ a {
 }
 
 .pf-spin {
-  animation: w3-spin 2s infinite linear
+  animation: pf-spin 2s infinite linear
 }
 
-@keyframes w3-spin {
+@keyframes pf-spin {
   0% {
     transform: rotate(0deg)
   }
